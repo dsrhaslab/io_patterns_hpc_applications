@@ -1,0 +1,11 @@
+; Topology for a large water box
+#include "oplsaa.ff/forcefield.itp"
+#include "oplsaa.ff/spce.itp"
+
+[ system ]
+Water Box in water
+
+[ molecules ]
+SOL             216
+
+SOL             32553
