@@ -10,7 +10,7 @@ This folder contains all the scripts necessary for identifying and classifying H
 
 - **Software folder**: Contains dstat script used.
 
-- **Src folder**: Contains all code related to train and test the models.
+- **ML Pipeline folder**: Contains all code related to train and test the models.
 
 - **Python files**:  Python scripts that are called by the Bash scripts in the Frontera and Scripts folders.
 
@@ -66,6 +66,9 @@ The script supports training different neural network models on the ImageNet dat
 
 ## SCRIPTS
 
+### Step 0: Compile the Trace Collector Tool
+
+Instructions for compiling the tool can be found in the README file located in the trace-collector folder.
 
 ### Step 1: Capturing Traces
 
@@ -266,9 +269,9 @@ Total documents in nvidia: 81464
 
 ## Model Training and Testing
 
-The `src/` directory contains all the scripts required to train and evaluate system call prediction models using [AutoGluon](https://www.autogluon.ai/). Each script is modularized to support various stages of the machine learning pipeline, from data preparation to model evaluation.
+The `ml_pipeline/` directory contains all the scripts required to train and evaluate system call prediction models using [AutoGluon](https://www.autogluon.ai/). Each script is modularized to support various stages of the machine learning pipeline, from data preparation to model evaluation.
 
-### Contents of `src/`:
+### Contents of `ml_pipeline/`:
 
 - **Setup Environment**: Configures the logging and runtime environment.
 
