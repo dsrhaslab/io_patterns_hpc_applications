@@ -1,16 +1,11 @@
-## Trace collector based on PADLL
+## Trace collector
 
-### Setup Trace Collector
+### Setup
 
 ```shell
 $ cd trace-collector
-$ mkdir build; cd build;
-$ cmake -DCMAKE_C_COMPILER=$(which gcc) -DCMAKE_CXX_COMPILER=$(which g++) 
+$ mkdir build
+$ cmake -DCMAKE_C_COMPILER=$(which gcc) -DCMAKE_CXX_COMPILER=$(which g++) -B build
+$ cd build
 $ cmake --build .
-$ export PATH_PADLL=$PWD
 ```
-
-**Note:** In Frontera you can use the script prep_frontera.sh to setup the trace collector. However, do not forget to run the command: 
-*export PATH_PADLL=$PWD* 
-outside of the script.
-***

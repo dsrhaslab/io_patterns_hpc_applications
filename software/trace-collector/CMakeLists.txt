@@ -44,9 +44,11 @@ include(CheckCXXCompilerFlag)
 check_cxx_compiler_flag(-Wthread-safety HAVE_CLANG_THREAD_SAFETY)
 
 # ---------------------------------------------------------------------------- #
-# padll
+# trace-collector
 
 add_library(padll SHARED "")
+set_target_properties(padll PROPERTIES OUTPUT_NAME "trace-collector")
+
 
 set_target_properties(
         padll
