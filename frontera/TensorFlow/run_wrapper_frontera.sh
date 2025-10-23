@@ -117,7 +117,7 @@ nohup python $DSTAT_PATH/dstat.py -tcdrnmg --ib --noheaders > $PROFILING_DIR/log
 sleep 300
 
 #mkdir -p $SCRATCH/tst
-LD_PRELOAD="$HOME/trace-collector-mine/build/libpadll.so" \
+LD_PRELOAD="$HOME/software/trace-collector/build/libtrace-collector.so" \
 python $SCRIPT_NAME $MODEL $N_EPOCHS $BATCH_SIZE $DATA_DIR $TASK_ID $WRKS_ADDRS $DISTRIBUTION_STRATEGY #|& tee $LOG_PATH
 
 sleep 300

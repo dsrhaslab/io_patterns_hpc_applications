@@ -33,7 +33,7 @@ echo "Starting now"
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
 # Export path to Trace Collector
-export LD_PRELOAD="$HOME/software/test/my/trace-collector/build/libpadll.so"
+export LD_PRELOAD="$HOME/software/trace-collector/build/libtrace-collector.so"
 
 # Start dstat on all nodes with nohup
 srun --nodes=$SLURM_NNODES --ntasks-per-node=1 --exclusive \

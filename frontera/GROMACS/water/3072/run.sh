@@ -40,7 +40,7 @@ echo "Starting now" >> $OUTPUT_DIR/env.log
 
 
 # Export path to Trace Collector
-export LD_PRELOAD="$HOME/software/test/my/trace-collector/build/libpadll.so"
+export LD_PRELOAD="$HOME/software/trace-collector/build/libtrace-collector.so"
 
 # Run the simulation
 ibrun gmx_mpi mdrun -v \

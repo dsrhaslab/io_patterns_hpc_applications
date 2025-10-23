@@ -2,6 +2,8 @@
 
 This folder contains all the scripts necessary for identifying and classifying HPC applications based on their I/O patterns.
 
+The dataset containing the I/O traces and performance metrics from four HPC applications (GROMACS, OpenFOAM, PyTorch, and TensorFlow), executed on the **Frontera** supercomputer, can be found in Zenodo: https://zenodo.org/records/17428437
+
 ## Structure
 
 - **Frontera folder**: Contains the scripts to run the applications. Each application may have multiple test cases, so each subfolder corresponds to a different test of the same application. At the base of the folder, there are also scripts required for different steps, but configured with Frontera-specific options to submit jobs using *sbatch*.
@@ -12,7 +14,7 @@ This folder contains all the scripts necessary for identifying and classifying H
 
 - **ML Pipeline folder**: Contains all code related to train and test the models.
 
-- **Python files**:  Python scripts that are called by the Bash scripts in the Frontera and Scripts folders.
+  - **Python files**:  Python scripts that are called by the Bash scripts in the Frontera and Scripts folders.
 
 
 ## Analyzed Applications
@@ -168,7 +170,12 @@ Example output:
 ]
 ```
 
-### Step 3: ElasticSearch Connection
+### Step 3: Setup analysis pipeline
+
+Instructions for compiling the Elasticsearch and Kibana can be found in the README file located in the analysis-pipeline folder.
+
+
+### Step 4: ElasticSearch Connection
 
 Run the `send_all_elasticsearch.sh` script in the *scripts* folder.
 **Note**: Ensure you update *ES_URL* with the correct Elasticsearch address.
@@ -267,7 +274,7 @@ Total documents in nvidia: 81464
 - The first node does more work than the others in the applications OpenFOAM and GROMACS.
 
 
-## Model Training and Testing
+## Prediction Pipeline
 
 The `ml_pipeline/` directory contains all the scripts required to train and evaluate system call prediction models using [AutoGluon](https://www.autogluon.ai/). Each script is modularized to support various stages of the machine learning pipeline, from data preparation to model evaluation.
 
@@ -351,3 +358,14 @@ It generates two plots:
 * `plot_accuracy.png`: Accuracy over 1, 10, and 100 predicted steps
 
 These visualizations help compare model performance across different prediction horizons.
+
+
+
+
+## Authors & Contacts
+
+Ana Rita Moreira Vaz (anaritavaz02@gmail.com)
+
+Supervised by:
+- João Paulo (jtpaulo@di.uminho.pt)
+- Tânia Esteves (tania.esteves@inesctec.pt)

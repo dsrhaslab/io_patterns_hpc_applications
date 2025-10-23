@@ -107,7 +107,7 @@ export TORCHELASTIC_HEALTH_CHECK_PORT=$MASTER_PORT
 #export LOGLEVEL=DEBUG
 
 
-export LD_PRELOAD="$HOME/software/test/my/trace-collector/build/libpadll.so"
+export LD_PRELOAD="$HOME/software/trace-collector/build/libtrace-collector.so"
 export DSTAT_PATH="$HOME/software/dstat.py"
 export OUTPUT_DIR="output"
 
@@ -147,7 +147,6 @@ srun --nodes=$SLURM_NNODES --ntasks-per-node=1 --exclusive \
 sleep 300
 
 
-# LD_LIBRARY_PATH=$SCRATCH/pytorch250/lib/:$LD_LIBRARY_PATH LD_PRELOAD=$HOME/trace-collector/build/libpadll.so \
 time srun --export=ALL \
 torchrun \
 	 --nnodes 4 \

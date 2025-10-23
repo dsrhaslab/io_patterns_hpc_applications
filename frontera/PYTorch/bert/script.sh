@@ -90,7 +90,7 @@ echo "SLURM_LOCALID: $SLURM_LOCALID"
 export TORCHELASTIC_ENABLE_FILE_TIMER=1
 export TORCHELASTIC_HEALTH_CHECK_PORT=$MASTER_PORT
 
-export LD_PRELOAD="$HOME/software/test/my/trace-collector/build/libpadll.so"
+export LD_PRELOAD="$HOME/software/trace-collector/build/libtrace-collector.so"
 export DSTAT_PATH="$HOME/software/dstat.py"
 export OUTPUT_DIR="output"
 
